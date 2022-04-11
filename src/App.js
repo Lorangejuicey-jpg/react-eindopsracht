@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
+// import Link from 'link-react';
 const App = () => {
   const [results, setResults] = useState({});
   const [resultsSprites, setResultsSprites] = useState({});
