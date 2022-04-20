@@ -34,7 +34,14 @@ const App = () => {
 
   return (
     <div>
-      <input placeholder="Enter an berry id" type="text" value={value} onChange={(e) => {setValue(e.target.value)}}></input>
+      <input
+        placeholder="Enter an berry id"
+        type="text"
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
+      ></input>
       <button onClick={ () = fetchData(value)}>Search</button>
       <h2>{results?.name}</h2>
       <img src={resultsSprites?.default}></img>
