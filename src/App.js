@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Berry from "./Components/berries/berry";
+import Home from "./Components/Home/home";
 // import React, { useEffect, useState } from "react";
 const App = () => {
   return (

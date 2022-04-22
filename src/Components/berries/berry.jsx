@@ -12,7 +12,7 @@ const Berry = () => {
         return response.json();
       })
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         setResults(result);
       });
   };
@@ -23,7 +23,7 @@ const Berry = () => {
         return response.json();
       })
       .then((resultSprite) => {
-        console.log(resultSprite);
+        // console.log(resultSprite);
         setResultsSprites(resultSprite);
       });
   };
@@ -36,16 +36,21 @@ const Berry = () => {
   try {
     return (
       <div>
+        <div className="menu-container">
+          <div>
+            <Link to="/" className="menu-item">Home</Link>
+            <Link to="/berryInfo" className="menu-item">Berry info</Link>
+          </div>
+        </div>
+        <div className="berry-container">
         <div className="input-container">
-          <Link to="/">Homepagina</Link>
-          <Link to="/berryInfo">Berry info</Link>
           <input
             placeholder="Enter an berry id"
             type="text"
             onChange={(e) => {
               setValue(e.target.value);
             }}
-          ></input>
+            ></input>
           <button type="submit" onClick={() => fetchData(value)}>
             Search
           </button>
@@ -63,13 +68,14 @@ const Berry = () => {
             <img
               className="berry-sprite"
               src={resultsSprites?.sprites?.default}
-            ></img>
+              ></img>
           </div>
+        </div>
         </div>
       </div>
     );
   } catch {
-    console.log("JoE mAmA");
+    // console.log("JoE mAmA");
   }
 };
 
